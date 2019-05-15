@@ -1,0 +1,51 @@
+<div style = "background-color: white; text-align: center" class="container">
+ <h2>Registrazione</h2>
+ <form style = "background-color: light-gray;" [formGroup]="myForm"
+       (ngSubmit)="onSubmit(myForm.value)"
+       class="jumbotron">
+
+   <div class="form-group">
+     <label for="nomeInput">Nome</label>
+     <input type="text"
+           id="nomeInput"
+           placeholder="Nome"
+           name="nome"
+           [formControl]="myForm.controls['nome']"
+           class="form-control">
+     <br>
+     <label for="cognomeInput">Cognome</label>
+     <input type="text"
+           id="cognomeInput"
+           placeholder="Cognome"
+           name="cognome"
+           [formControl]="myForm.controls['cognome']"
+           class="form-control">
+     <br>
+     <label for="usernameInput">Username</label>
+     <input type="text"
+           id="usernameInput"
+           placeholder="Usernome"
+           name="username"
+           [formControl]="myForm.controls['username']"
+           class="form-control">
+     <br>
+     <label for="emailInput">Email</label>
+     <input type="email"
+           id="emailInput"
+           placeholder="Email"
+           name="email"
+           [formControl]="myForm.controls['email']"
+           class="form-control">
+     <br>
+     <label for="passwordInput">Password</label>
+     <input type="password"
+           id="passwordInput"
+           placeholder="Password"
+           name="password"
+           [formControl]="myForm.controls['password']"
+           class="form-control">
+   </div>
+   <button type="submit" class="btn btn-primary">Registrati</button>
+    <br>
+ </form>
+</div>
