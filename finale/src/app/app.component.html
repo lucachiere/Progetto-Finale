@@ -1,5 +1,7 @@
 <div style = "background-color: white; text-align: center" class="container">
- <h2>Registrazione</h2>
+ <button style = "float: right" type="submit" class="btn btn-primary">Log In</button>
+ <h2 style = "text-align: center">Registrazione</h2>
+ 
  <form style = "background-color: light-gray;" [formGroup]="myForm"
        (ngSubmit)="onSubmit(myForm.value)"
        class="jumbotron">
@@ -46,6 +48,27 @@
            class="form-control">
    </div>
    <button type="submit" class="btn btn-primary">Registrati</button>
-    <br>
+   <br>
+   <br>
+   <div *ngIf="!myForm.controls['nome'].valid"
+    class="alert alert-danger">Nome non è valido
+   </div>
+   <br>
+   <div *ngIf="!myForm.controls['cognome'].valid"
+    class="alert alert-danger">Cognome non è valido
+   </div>
+   <br>
+   <div *ngIf="!myForm.controls['username'].valid"
+    class="alert alert-danger">Username non è valido
+   </div>
+   <br>
+   <div *ngIf="!myForm.controls['email'].valid"
+    class="alert alert-danger">Email non è valida
+   </div>
+   <br>
+   <div *ngIf="!myForm.controls['password'].valid"
+    class="alert alert-danger">Password non è valida
+   </div>
+   <br>
  </form>
 </div>
