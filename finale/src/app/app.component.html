@@ -1,9 +1,8 @@
 <div style = "background-color: white; text-align: center" class="container">
- <button style = "float: right" type="submit" class="btn btn-primary">Log In</button>
  <h2 style = "text-align: center">Registrazione</h2>
- 
+ <button style = "float: right" type="submit" class="btn btn-primary">Log In</button>
  <form style = "background-color: light-gray;" [formGroup]="myForm"
-       (ngSubmit)="onSubmit(myForm.value)"
+       (ngSubmit)="onSubmit()"
        class="jumbotron">
 
    <div class="form-group">
@@ -71,4 +70,12 @@
    </div>
    <br>
  </form>
+</div>
+
+<div class="w-50 text-center" style="margin: 50px auto">
+  <h2>Elenco appuntamenti</h2>
+  <ul class="list-group">
+    <li *ngFor="let registrazione of registrazioni" class="list-group-item text-center">
+      {{ registrazione.nome }} - {{ registrazione.cognome }}  ->  {{ registrazione.username }}  ->  {{ registrazione.email }}</li>
+  </ul>
 </div>
